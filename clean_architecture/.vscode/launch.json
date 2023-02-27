@@ -1,0 +1,56 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "LOCAL EMULATOR",
+            "request": "launch",
+            "type": "dart",
+            "toolArgs": [
+                "--dart-define",
+                "USE_FIREBASE_EMU=true",
+            ]
+        },
+        {
+            "name": "LOCAL DEVICE",
+            "request": "launch",
+            "type": "dart",
+            "toolArgs": [
+                "--dart-define",
+                "USE_FIREBASE_EMU=true",
+                "--dart-define",
+                "FIREBASE_EMU_URL=$(((ipconfig | findstr [0-9].\\.)[0]).Split()[-1])",
+            ]
+        },
+        {
+            "name": "PRODUCTION",
+            "request": "launch",
+            "type": "dart",
+            "toolArgs": [
+                "--dart-define",
+                "USE_FIREBASE_EMU=false",
+            ]
+        },
+        //---------------------------------
+        {
+            "name": "app_name (debug mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
+        },
+        {
+            "name": "app_name (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app_name (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
