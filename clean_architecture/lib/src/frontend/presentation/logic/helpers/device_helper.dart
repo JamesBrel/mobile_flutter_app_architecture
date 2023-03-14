@@ -1,5 +1,3 @@
-// Remove slash comments and edit the page with quick fix
-
 import 'package:flutter/material.dart';
 
 class DeviceHelper {

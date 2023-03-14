@@ -1,4 +1,3 @@
-/// Remove the slash comments to active the code lines
 import 'package:flutter/material.dart';
 
 import 'language_translation_helper.dart';

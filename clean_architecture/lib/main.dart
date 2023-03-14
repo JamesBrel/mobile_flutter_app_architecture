@@ -23,37 +23,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: SizeConfigHelper.sizeScreen(),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (context, child) => MaterialApp.router(
-              routeInformationProvider:
-                  MobileRoutes.router.routeInformationProvider,
-              routeInformationParser:
-                  MobileRoutes.router.routeInformationParser,
-              routerDelegate: MobileRoutes.router.routerDelegate,
-              debugShowCheckedModeBanner: true,
-              title: titleApp,
-              theme: ThemesApp.themes[Themes.lightTheme],
-              localizationsDelegates: const [
-                TranslationsDelegateHelper(),
-                GlobalMaterialLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-              ],
-              supportedLocales: const [
-                Locale('fr', 'FR'),
-                Locale('en', 'US'),
-              ],
-              localeResolutionCallback: (locale, supportedLocales) {
-                for (var supportedLocale in supportedLocales) {
-                  if (supportedLocale.languageCode == locale!.languageCode &&
-                      supportedLocale.countryCode == locale.countryCode) {
-                    return supportedLocale;
-                  }
-                }
-                return supportedLocales.first;
-              },
-            ));
+      designSize: SizeConfigHelper.sizeScreen(),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) => MaterialApp.router(
+        routeInformationProvider: MobileRoutes.router.routeInformationProvider,
+        routeInformationParser: MobileRoutes.router.routeInformationParser,
+        routerDelegate: MobileRoutes.router.routerDelegate,
+        debugShowCheckedModeBanner: true,
+        title: titleApp,
+        theme: ThemesApp.themes[Themes.lightTheme],
+        localizationsDelegates: const [
+          TranslationsDelegateHelper(),
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('fr', 'FR'),
+          Locale('en', 'US'),
+        ],
+        localeResolutionCallback: (locale, supportedLocales) {
+          for (var supportedLocale in supportedLocales) {
+            if (supportedLocale.languageCode == locale!.languageCode &&
+                supportedLocale.countryCode == locale.countryCode) {
+              return supportedLocale;
+            }
+          }
+          return supportedLocales.first;
+        },
+      ),
+    );
   }
 }

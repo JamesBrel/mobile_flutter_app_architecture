@@ -1,4 +1,4 @@
-// import 'package:go_router/go_router.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../utils/constants/routes_const.dart' as route;
 import '../../layouts/screens/welcome_screen.dart';

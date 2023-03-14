@@ -1,4 +1,3 @@
-/// Remove the slash comments to active the code lines
 import 'dart:ui';
 
 import '/src/frontend/presentation/logic/helpers/device_helper.dart';
