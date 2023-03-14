@@ -29,8 +29,8 @@ the predefined files, such as welcome.dart in the front end and other folders, a
            sdk: flutter
      - flutter_screenutil
      - go_router
-     - intl
-     
+     - intl : (we recommanded to use v0.17) 
+    
     these packages will allow you to easily activate the various files imported into the architecture.
     then, you just have to follow, the readme.md in the folder **assets**
 
